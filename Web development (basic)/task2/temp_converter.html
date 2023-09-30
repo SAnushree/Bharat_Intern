@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function cnvrt1()
+        {
+            var c,f;
+            c=document.f1.t1.value;
+            f=(c*1.8)+32;
+            document.f1.t2.value=f;
+        }
+        function cnvrt2()
+        {
+            var c,f;
+            f=document.f1.t3.value;
+            c=(f-32)/1.8;
+            document.f1.t4.value=c;
+        }
+        function changecolor(c)
+        {
+            document.body.style.background=c;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#301934">
+    <div>
+    <form name="f1" method="post" action="#">
+        <table border="6" border color="black" align="center" width="30%" cellspacing="5" bgcolor="lightblue" cellpadding="25">
+            <tr>
+                <th colspan="4">CELSIUS to FAHRENHEIT</th>
+            </tr>
+            <tr>
+                <td>℃</td>
+                <td><input type="text" name="t1" onkeyup="cnvrt1(this.value)"></td>
+                <td>℉</td>
+                <td><input type="text" name="t2"></td>
+            </tr>
+            <tr>
+                <td>℉</td>
+                <td><input type="text" name="t3" onkeyup="cnvrt2(this.value)"></td>
+                <td>℃</td>
+                <td><input type="text" name="t4"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">Select background</td>
+                <td>
+                    <select name="c1" onchange="changecolor(this.value)">
+                        <option value="#301934">Purple</option>
+                        <option value="blue">Blue</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="brown">Brown</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
